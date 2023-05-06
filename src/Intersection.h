@@ -6,6 +6,7 @@
 #include <mutex>
 #include <memory>
 #include "TrafficObject.h"
+#include "TrafficLight.h"
 
 // forward declarations to avoid include cycle
 class Street;
@@ -36,7 +37,7 @@ public:
 
     // getters / setters
     void setIsBlocked(bool isBlocked);
-
+	TrafficLight _trafficLight;
     // typical behaviour methods
     void addVehicleToQueue(std::shared_ptr<Vehicle> vehicle);
     void addStreet(std::shared_ptr<Street> street);
